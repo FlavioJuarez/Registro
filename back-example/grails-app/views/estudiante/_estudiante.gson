@@ -1,0 +1,10 @@
+import back.example.Estudiante
+
+model {
+	Estudiante estudiante
+}
+
+json g.render(estudiante, [resolveTemplate: false])
+
+
+

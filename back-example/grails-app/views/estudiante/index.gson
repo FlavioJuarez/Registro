@@ -1,0 +1,8 @@
+import back.example.Estudiante
+
+model {
+	Iterable<Estudiante> estudianteList
+}
+
+json tmpl.estudiante(estudianteList ?: [])
+
