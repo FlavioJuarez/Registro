@@ -1,0 +1,16 @@
+<h1> Hola Mundo </h1>
+
+<form [formGroup]="signupForm" (ngSubmit)="enviar(singupForm.value)">
+  <label>Nombre</label>
+  <input formControlName="nombre" type="text" />
+  <label>Email</label>
+  <input formControlName="email" type="email" />
+  <label>Nivel Academico</label>
+  <input formControlName="nivel" type="text" />
+  <label>Matricula</label>
+  <input formControlName="matricula" type="text" />
+  <label>Semestre</label>
+  <input formControlName="semestre" type="number" />
+  <button [disabled]="singupForm.invalid" type="submit">Registrarse</button>
+
+</form>
