@@ -1,6 +1,6 @@
-<h1> Hola Mundo </h1>
+<h1> Registro </h1>
 
-<form [formGroup]="singupForm" (ngSubmit)="enviar(singupForm.value)">
+<form [formGroup]="singupForm" (ngSubmit)=" sendGetRequest()">
 	<label>Nombre</label>
 	<input formControlName="nombre" type="text" />
 	<br>
@@ -8,7 +8,12 @@
 	<input formControlName="email" type="email" />
 	<br>
 	<label>Nivel Academico</label>
-	<input formControlName="nivel" type="text" />
+	<select formControlName="nivel"  name="singleSelect" ng-model="data.singleSelect">
+      <option value="Bachllerato">Bachllerato</option>
+      <option value="Licenciatura">Licenciatura</option>
+      <option value="Maestria">Maestria</option>
+      <option value="Doctorado">Doctorado</option>
+    </select>
 	<br>
 	<label>Matricula</label>
 	<input formControlName="matricula" type="text" />
@@ -18,4 +23,8 @@
 	<br>
 	<button [disabled]="singupForm.invalid" type="submit">Registrarse</button>
 
+
+
 </form>
+
+<!-- <button (click)="sendGetRequest()">Registrarse</button> -->

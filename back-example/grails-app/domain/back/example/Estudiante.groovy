@@ -5,7 +5,9 @@ import grails.compiler.GrailsCompileStatic
 @GrailsCompileStatic
 class Estudiante {
 
+    String nombre
     String name
+    String password
     String correo
     String nivel
     String matricula
@@ -15,6 +17,8 @@ class Estudiante {
     int semestre
 
     static constraints = {
+        nombre blank:false
+        password blank:false
         name blank:false
         correo blank:false
         nivel blank:false
