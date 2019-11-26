@@ -2,10 +2,11 @@ import { Component } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
 
+declare var $:any;
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.inicio.html',
+  templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
@@ -36,8 +37,18 @@ export class AppComponent {
   }
 
   public sendGetRequest(){
-  	this.httpClient.get<any>(this.REST_API_SERVER).subscribe(data => console.log(res),
+  	this.httpClient.get<any>(this.REST_API_SERVER).subscribe(data => this.estudiantes = data,
   				error => this.errorMessage = error);
+  }
+
+  public imprimir(){
+  	console.log(this.estudiantes);
+  }
+
+  jquery_code(){
+  	$(document).ready(function(){
+    	$('.modal').modal();
+  	});
   }
 
 }
