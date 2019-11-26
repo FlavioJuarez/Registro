@@ -5,11 +5,13 @@ import { AppComponent } from './app.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { MaterializeModule } from 'angular2-materialize';
+import { RegistroComponent } from './registro/registro.component';
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    RegistroComponent
   ],
   imports: [
     BrowserModule,

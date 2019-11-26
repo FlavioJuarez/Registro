@@ -10,7 +10,7 @@ declare var $:any;
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'front';
+  title = 'LaSalle';
 
   private REST_API_SERVER = "http://localhost:8080/estudiantes";
   public estudiantes = [];
