@@ -13,10 +13,10 @@ class EstudianteController extends RestfulController {
     //end::controller[]
 
     // tag::searchAction[]
-    def search(String q, Integer max ) { // <1>
-        if (q) {
+    def search(String name, Integer max ) { // <1>
+        if (name) {
             //tag::respond[]
-            respond estudianteService.findByNameLike("%${q}%".toString(), [max: Math.min( max ?: 10, 100)]) // <3>
+            respond estudianteService.findByNameLike("%${name}%".toString(), [max: Math.min( max ?: 10, 100)]) // <3>
             //end::respond[]
         }
         else {
