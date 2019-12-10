@@ -1,29 +1,41 @@
 
 <div class="row" style="background-image: url(https://tuul.tv/sites/default/files/inline-images/tips-de-estudio-de-alumnos-de-ingenieria-para-estudiantes-de-ingenieria-1-compressor.jpg);">
-  <div class="col s12 m4 offset-m4">
+  <div class="col s12 m6 offset-m3">
     <div class="card">
       <div class="card-action while-text">
-        <h3 class="center-align  darken-4 " style="color: darkblue">Perfil</h3>
+        <h3 class="center-align  darken-4 " style="color: darkblue">¡Bienvenido {{ estudiante.name }}!</h3>
       </div>
-	      <div class="card-content">
-	        <div class="form-field">
-	          <label for="nombre" class="indigo-text text-darken-4">Nombre:  {{ estudiante.nombre }}</label>
-	        </div><br>
-	        <div class="form-field">
-	          <label for="email" class="indigo-text text-darken-4">Email:  {{ estudiante.correo }}</label>
-	        </div><br>
-	        <div class="form-field">
-	          <label for="nivel" class="indigo-text text-darken-4">Nivel Academico:  {{ estudiante.nivel }}</label>
-	        </div><br>
-	        <div class="form-field">
-	          <label for="matricula" class="indigo-text text-darken-4">Matricula:  {{ estudiante.matricula }}</label>
-	        </div><br>
-	        <div class="form-field">
-	          <label for="semestre" class="indigo-text text-darken-4">Semestre:  {{ estudiante.semestre }}</label>
-	        </div><br>
-	        <div class="form-field">
-	        </div><br>
+      <div class="row">
+	    <div class="col s12 m5">
+	      <div class="card">
+	        <div class="card-content white-text">
+	          <img src="https://image.flaticon.com/icons/png/512/64/64096.png" style="width: 200px;" >
+	        </div>
 	      </div>
+	    </div>
+	    <div class="col s12 m6">
+	      <div class="card ">
+	        <div class="card-content white-text">
+	          	<div class="">
+          		<label  class="indigo-text text-darken-4">Nombre:  {{ estudiante.nombre }}</label>
+		        </div><br>
+		        <div class="">
+		          <label class="indigo-text text-darken-4">Email:  {{ estudiante.correo }}</label>
+		        </div><br>
+		        <div class="">
+		          <label  class="indigo-text text-darken-4">Nivel Academico:  {{ estudiante.nivel }}</label>
+		        </div><br>
+		        <div class="">
+		          <label  class="indigo-text text-darken-4">Matricula:  {{ estudiante.matricula }}</label>
+		        </div><br>
+		        <div class="">
+		          <label  class="indigo-text text-darken-4">Semestre:  {{ estudiante.semestre }}</label>
+		        </div><br>
+		        <button class="btn-large waves-effect waves-dark indigo darken-4 left-aling"> Editar </button>
+	        </div>
+	      </div>
+	    </div>
+	  </div>
     </div>
   </div>  
 </div>

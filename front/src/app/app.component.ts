@@ -53,14 +53,16 @@ export class AppComponent {
   }
 
   public cambiarStatus(data,name,password){
-  	if(data[0].name == name && data[0].password == password ){
-  		this.statusLogin = true ;
-  		this.estudiante = data[0]; 
-  		console.log(this.estudiante)
-  	} else {
-  		//M.toast({html: 'Usuario o contraseña incorrecta!'})
-  	}
-  	console.log(data[0].name + " " + name)
+    if(data.length > 0){
+    	if(data[0].name == name && data[0].password == password ){
+    		this.statusLogin = true ;
+    		this.estudiante = data[0]; 
+    		console.log(this.estudiante)
+    	} else {
+        alert("Usuario o contraseña incorrecta")
+    		//M.toast({html: 'Usuario o contraseña incorrecta!'})
+    	}
+    }
   }
 
   public cambiarStatusRegistro(registro){
